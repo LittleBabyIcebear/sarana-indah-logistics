@@ -559,6 +559,105 @@
 
     </section><!-- /Portfolio Section -->
 
+    <!-- Our Clients Section -->
+    <section id="our-clients" class="section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Clients</h2>
+        <p>Businesses We Serve</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <!-- px-5 menyisakan ruang di kiri-kanan supaya panah tidak menimpa kartu -->
+        <div class="position-relative px-5">
+
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 3000,
+                  "disableOnInteraction": false,
+                  "pauseOnMouseEnter": true
+                },
+                "navigation": {
+                  "nextEl": "#clients-next",
+                  "prevEl": "#clients-prev"
+                },
+                "slidesPerView": 1,
+                "spaceBetween": 20,
+                "breakpoints": {
+                  "576": { "slidesPerView": 2, "spaceBetween": 20 },
+                  "992": { "slidesPerView": 3, "spaceBetween": 24 }
+                }
+              }
+            </script>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide py-3 h-auto">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                  <div class="card-body p-4">
+                    <div class="ratio ratio-16x9 mb-3">
+                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 1 logo" class="object-fit-contain" loading="lazy">
+                    </div>
+                    <h3 class="h6 mb-1">PT Nama Client 1</h3>
+                    <p class="small text-muted mb-0">Timber &amp; Wood Products</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide py-3 h-auto">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                  <div class="card-body p-4">
+                    <div class="ratio ratio-16x9 mb-3">
+                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 2 logo" class="object-fit-contain" loading="lazy">
+                    </div>
+                    <h3 class="h6 mb-1">PT Nama Client 2</h3>
+                    <p class="small text-muted mb-0">Frozen Seafood</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide py-3 h-auto">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                  <div class="card-body p-4">
+                    <div class="ratio ratio-16x9 mb-3">
+                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 3 logo" class="object-fit-contain" loading="lazy">
+                    </div>
+                    <h3 class="h6 mb-1">PT Nama Client 3</h3>
+                    <p class="small text-muted mb-0">Paper Products</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide py-3 h-auto">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                  <div class="card-body p-4">
+                    <div class="ratio ratio-16x9 mb-3">
+                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 4 logo" class="object-fit-contain" loading="lazy">
+                    </div>
+                    <h3 class="h6 mb-1">PT Nama Client 4</h3>
+                    <p class="small text-muted mb-0">General Cargo</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Panah: di luar .swiper, di dalam wrapper px-5 -->
+          <div id="clients-prev" class="swiper-button-prev" aria-label="Previous clients"></div>
+          <div id="clients-next" class="swiper-button-next" aria-label="Next clients"></div>
+
+        </div>
+      </div>
+
+    </section><!-- /Our Clients Section -->
+
+
   </main>
 
   <footer id="footer" class="footer dark-background">
