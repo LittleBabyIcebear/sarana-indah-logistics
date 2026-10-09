@@ -1,0 +1,17 @@
+# Files and folders that must NOT be uploaded to Cloudflare as website assets.
+# (wrangler uploads the whole repo root because wrangler.jsonc uses directory "./")
+
+# Git history (this was the 36 MiB file that made the deploy fail)
+.git
+.gitignore
+
+# Config and tooling
+wrangler.jsonc
+.assetsignore
+node_modules
+
+# Template leftovers that should not be public
+starter-page.html
+
+# Saved WhatsApp web page that ended up inside assets/img (safe to delete from the repo too)
+assets/img/(4) WhatsApp*
