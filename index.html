@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Sarana Indah Logistic | Freight Forwarding &amp; Export Import Surabaya </title>
+  <title>Freight Forwarding Surabaya | Sarana Indah Logistic (SiLog)</title>
   <meta name="description" content="PT Sarana Indah Logistic offers freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.">
   <link rel="canonical" href="https://saranaindahlogistic.com/">
   <meta name="robots" content="index, follow">
@@ -12,33 +12,51 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="PT Sarana Indah Logistic">
+  <meta property="og:locale" content="en_ID">
   <meta property="og:title" content="Freight Forwarding &amp; Export Import Surabaya | Sarana Indah Logistic">
   <meta property="og:description" content="Freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.">
   <meta property="og:url" content="https://saranaindahlogistic.com/">
   <meta property="og:image" content="https://saranaindahlogistic.com/assets/img/hero-carousel/hero-carousel-1.webp">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freight Forwarding Surabaya | Sarana Indah Logistic (SiLog)">
+  <meta name="twitter:description" content="Freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.">
 
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "PT Sarana Indah Logistic",
-    "url": "https://saranaindahlogistic.com/",
-    "logo": "https://saranaindahlogistic.com/assets/img/logo.png",
-    "image": "https://saranaindahlogistic.com/assets/img/hero-carousel/hero-carousel-1.webp",
-    "description": "Freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.",
-    "telephone": "+6282139987553",
-    "email": "admin@saranaindahlogistic.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Pakuwon Centre No.1, 23rd Floor, Jl. Embong Malang",
-      "addressLocality": "Surabaya",
-      "addressRegion": "East Java",
-      "postalCode": "60261",
-      "addressCountry": "ID"
-    },
-    "areaServed": ["Surabaya", "East Java", "Indonesia"]
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://saranaindahlogistic.com/#organization",
+        "name": "PT Sarana Indah Logistic",
+        "alternateName": "SiLog",
+        "url": "https://saranaindahlogistic.com/",
+        "logo": "https://saranaindahlogistic.com/assets/img/logo.png",
+        "image": "https://saranaindahlogistic.com/assets/img/hero-carousel/hero-carousel-1.webp",
+        "description": "Freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.",
+        "telephone": "+6282229505258",
+        "email": "admin@saranaindahlogistic.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pakuwon Centre No.1, 23rd Floor, Jl. Embong Malang",
+          "addressLocality": "Surabaya",
+          "addressRegion": "East Java",
+          "postalCode": "60261",
+          "addressCountry": "ID"
+        },
+        "areaServed": ["Surabaya", "East Java", "Indonesia"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://saranaindahlogistic.com/#website",
+        "url": "https://saranaindahlogistic.com/",
+        "name": "PT Sarana Indah Logistic",
+        "alternateName": ["SiLog", "Sarana Indah Logistic"],
+        "inLanguage": "en",
+        "publisher": { "@id": "https://saranaindahlogistic.com/#organization" }
+      }
+    ]
   }
   </script>
 
@@ -60,6 +78,30 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style id="silog-brand">
+    /* Header brand lockup: SILOG + section-title style tagline */
+    .header .logo .brand-lockup { display: flex; flex-direction: column; justify-content: center; line-height: 1; }
+    .header .logo .brand-name {
+      font-family: var(--heading-font); font-size: 30px; font-weight: 800; letter-spacing: .5px;
+      color: var(--heading-color); text-transform: uppercase; line-height: 1;
+    }
+    .header .logo .brand-full {
+      display: flex; align-items: center; margin-top: 5px;
+      font-family: var(--heading-font); font-size: 10.5px; font-weight: 500; letter-spacing: 1.6px;
+      text-transform: uppercase; color: #6b7280; white-space: nowrap; line-height: 1;
+    }
+    @media (max-width: 575px) {
+      .header .logo .brand-name { font-size: 24px; }
+      .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
+      .header .logo .brand-full::after { display: none; }
+    }
+  </style>
+  <style id="silog-hero">
+    /* Hero: first slide title is the page H1 (same look as the template's hero h2) */
+    .hero h1 { margin-bottom: 30px; font-size: 48px; font-weight: 700; animation: fadeInDown 1s both; }
+    @media (max-width: 768px) { .hero h1 { font-size: 30px; } }
+    @media (min-width: 1024px) { .hero h1 { max-width: 60%; } }
+  </style>
 
 </head>
 
@@ -69,34 +111,37 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">SiLog</h1>
+        <img src="assets/img/logo.png" alt="PT Sarana Indah Logistic (SiLog) logo">
+        <span class="brand-lockup">
+          <span class="brand-name">SiLog</span>
+          <span class="brand-full">Sarana Indah Logistic</span>
+        </span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li class="dropdown">
           <a href="#services">
             <span>Services</span>
             <i class="bi bi-chevron-down toggle-dropdown"></i>
           </a>
           <ul>
-            <li><a href="#services">Sea Freight</a></li>
-            <li><a href="#services">Air Freight</a></li>
-            <li><a href="#services">Customs Clearance</a></li>
-            <li><a href="#services">Trucking</a></li>
-            <li><a href="#services">Cargo Handling</a></li>
-            <li><a href="#services">Freight Forwarding</a></li>
+            <li><a href="services.html#sea-freight">Sea Freight</a></li>
+            <li><a href="services.html#air-freight">Air Freight</a></li>
+            <li><a href="services.html#customs-clearance">Customs Clearance</a></li>
+            <li><a href="services.html#trucking">Trucking</a></li>
+            <li><a href="services.html#cargo-handling">Cargo Handling</a></li>
+            <li><a href="services.html#freight-forwarding">Freight Forwarding</a></li>
           </ul>
           </li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted btn-whatsapp" href="https://wa.me/6282139987553" target="_blank" rel="noopener">
+      <a class="btn-getstarted btn-whatsapp" href="https://wa.me/6282229505258" target="_blank" rel="noopener">
         <i class="bi bi-whatsapp"></i> Contact Us
       </a>
 
@@ -113,9 +158,9 @@
         <div class="carousel-item active">
           <img src="assets/img/hero-carousel/hero-carousel-1.webp" alt="Cargo containers handled by PT Sarana Indah Logistic in Surabaya" fetchpriority="high">
           <div class="carousel-container">
-            <h2>Freight Forwarding &amp; Export Import Surabaya</h2>
+            <h1>Freight Forwarding &amp; Export Import Surabaya</h1>
             <p>PT Sarana Indah Logistic provides reliable and efficient logistic solutions to support the movement of goods and the growth of your business.</p>
-              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282139987553" target="_blank" rel="noopener">
+              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282229505258" target="_blank" rel="noopener">
                 <i class="bi bi-whatsapp"></i> Contact Us
               </a>
           </div>
@@ -126,7 +171,7 @@
           <div class="carousel-container">
             <h2>Integrated Logistic Solutions</h2>
             <p>From transportation to delivery, we provide practical logistic solutions designed to ensure your goods move safely, efficiently, and on time.</p>
-              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282139987553" target="_blank" rel="noopener">
+              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282229505258" target="_blank" rel="noopener">
                 <i class="bi bi-whatsapp"></i> Contact Us
               </a>
           </div>
@@ -137,7 +182,7 @@
           <div class="carousel-container">
             <h2>Your Trusted Logistics Partner</h2>
             <p>We are committed to delivering dependable service, responsive support, and efficient logistics solutions tailored to our customers' needs.</p>
-              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282139987553" target="_blank" rel="noopener">
+              <a class="btn-get-started btn-whatsapp" href="https://wa.me/6282229505258" target="_blank" rel="noopener">
                 <i class="bi bi-whatsapp"></i> Contact Us
               </a>
           </div>
@@ -183,7 +228,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p>Operating from Surabaya, one of Indonesia's main trade gateways, we coordinate shippers, carriers, ports, and destinations so your cargo arrives safely and on schedule. Contact us for freight forwarding and export import services tailored to your cargo.</p>
-            <a href="maintenance.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
         </div>
@@ -280,6 +325,10 @@
               <img src="assets/img/clients/cma.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
             </div>
 
+            <div class="swiper-slide client-logo">
+              <img src="assets/img/clients/hapag.png" class="img-fluid" alt="HAPAG LLOYD logo" loading="lazy">
+            </div>
+
           </div>
         </div> 
           
@@ -308,7 +357,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#sea-freight" class="stretched-link">
                     Sea Freight
                   </a>
                 </h4>
@@ -333,7 +382,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#air-freight" class="stretched-link">
                     Air Freight
                   </a>
                 </h4>
@@ -358,7 +407,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#trucking" class="stretched-link">
                     Trucking
                   </a>
                 </h4>
@@ -383,7 +432,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#customs-clearance" class="stretched-link">
                     Customs Clearance
                   </a>
                 </h4>
@@ -407,7 +456,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#cargo-handling" class="stretched-link">
                     Cargo Handling
                   </a>
                 </h4>
@@ -431,7 +480,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="#" class="stretched-link">
+                  <a href="services.html#freight-forwarding" class="stretched-link">
                     Freight Forwarding
                   </a>
                 </h4>
@@ -658,6 +707,7 @@
     </section><!-- /Our Clients Section -->
 
 
+
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -678,12 +728,12 @@
 
             <p class="mt-3">
               <strong>Phone:</strong>
-              <span><a href="https://wa.me/6282139987553" rel="noopener">+62 821-3998-7553</a></span>
+              <span><a href="https://wa.me/6282229505258" rel="noopener">+62 822-2950-5258</a></span>
             </p>
 
             <p>
               <strong>Email:</strong>
-              <span><a href="mailto:admin@saranaindahlogistic.com">admin@saranaindahlogistic.com</a></span>
+              <span><a href="mailto:admin@saranaindahlogistic.com">admin@saranaindahlogistic.com</a><br><a href="mailto:subdoc@saranaindahlogistic.com">subdoc@saranaindahlogistic.com</a></span>
             </p>
           </div>
 
@@ -720,11 +770,15 @@
             </li>
 
             <li>
-              <a href="#about">About Us</a>
+              <a href="about.html">About Us</a>
             </li>
 
             <li>
-              <a href="#services">Services</a>
+              <a href="services.html">Services</a>
+            </li>
+
+            <li>
+              <a href="contact.html">Contact Us</a>
             </li>
 
             <li>
@@ -747,7 +801,7 @@
           <div class="mt-3">
             <iframe
               title="PT Sarana Indah Logistic location map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.733300677943!2d112.73749617357119!3d-7.2631657713581745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f960aee9a64d%3A0xaa9e2f2c4ed67175!2sTunjungan%20Plaza!5e1!3m2!1sen!2sid!4v1788700187092!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.7477547059398!2d112.73592007357118!3d-7.261010071334773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95df3ab3def%3A0xd66249eae1f423f3!2sPakuwon%20Center%20Office%20Tower%2C%20Jl.%20Embong%20Malang%20No.1%2C%20RW.5%2C%20Kedungdoro%2C%20Kecamatan%20Kedungsari%2C%20Surabaya%2C%20Jawa%20Timur%2060261!5e1!3m2!1sen!2sid!4v1791448344086!5m2!1sen!2sid"
               width="100%"
               height="220"
               style="border:0; width:100%;"
@@ -806,5 +860,3 @@
 </body>
 
 </html>
-
-
