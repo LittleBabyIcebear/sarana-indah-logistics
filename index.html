@@ -90,6 +90,9 @@
       font-family: var(--heading-font); font-size: 10.5px; font-weight: 500; letter-spacing: 1.6px;
       text-transform: uppercase; color: #6b7280; white-space: nowrap; line-height: 1;
     }
+    .header .logo .brand-full::after {
+      content: ""; display: inline-block; width: 34px; height: 2px; margin-left: 9px; background: var(--accent-color, #d62828); border-radius: 2px;
+    }
     @media (max-width: 575px) {
       .header .logo .brand-name { font-size: 24px; }
       .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
@@ -101,6 +104,32 @@
     .hero h1 { margin-bottom: 30px; font-size: 48px; font-weight: 700; animation: fadeInDown 1s both; }
     @media (max-width: 768px) { .hero h1 { font-size: 30px; } }
     @media (min-width: 1024px) { .hero h1 { max-width: 60%; } }
+  </style>
+
+  <style id="silog-cargo">
+    /* Cargo We Handle: always-visible captions + WhatsApp action (hover-only captions never showed on phones) */
+    .portfolio .portfolio-filters { margin-bottom: 26px; }
+    .portfolio .portfolio-filters li { border: 1px solid rgba(8, 24, 68, .18); margin: 0 4px 8px; padding: 9px 20px; border-radius: 50px; }
+    .portfolio .portfolio-filters li:hover, .portfolio .portfolio-filters li.filter-active { border-color: var(--accent-color); }
+
+    .portfolio .cargo-card { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 28px rgba(8, 24, 68, .16); background: #0a1e55; }
+    .portfolio .cargo-card > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .7s ease; }
+    .portfolio .cargo-card:hover > img { transform: scale(1.07); }
+
+    .portfolio .cargo-card .portfolio-info {
+      opacity: 1; position: absolute; left: 0; right: 0; bottom: 0; padding: 70px 18px 16px; z-index: 3;
+      background: linear-gradient(180deg, rgba(6, 20, 64, 0) 0%, rgba(6, 20, 64, .86) 52%, rgba(6, 20, 64, .96) 100%);
+      transition: padding .35s ease;
+    }
+    .portfolio .cargo-card:hover .portfolio-info { padding-top: 90px; }
+    .portfolio .cargo-card .portfolio-info h4 { color: #fff; padding-right: 0; margin: 0 0 4px; font-size: 19px; }
+    .portfolio .cargo-card .portfolio-info p { color: rgba(255, 255, 255, .86); padding-right: 0; margin: 0 0 12px; font-size: 14px; }
+
+    .portfolio .cargo-ask {
+      display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600;
+      color: #fff; background: #d62828; padding: 7px 15px; border-radius: 50px; transition: .25s;
+    }
+    .portfolio .cargo-ask:hover { background: #fff; color: #d62828; }
   </style>
 
 </head>
@@ -325,10 +354,6 @@
               <img src="assets/img/clients/cma.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
             </div>
 
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/clients/hapag.png" class="img-fluid" alt="HAPAG LLOYD logo" loading="lazy">
-            </div>
-
           </div>
         </div> 
           
@@ -448,7 +473,7 @@
           <!-- End Service Item -->
         
         
-          <!-- Warehousing & Cargo Handling -->
+          <!-- Cargo Handling -->
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item d-flex position-relative h-100">
             
@@ -462,8 +487,8 @@
                 </h4>
               
                 <p class="description">
-                  Secure warehousing and cargo handling services to support
-                  efficient storage, loading, and distribution operations.
+                  Careful loading, unloading, and cargo handling services to support
+                  safe and efficient shipment operations.
                 </p>
               </div>
             
@@ -519,84 +544,155 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <!--<ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul> -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All Cargo</li>
+            <li data-filter=".filter-frozen">Frozen Seafood</li>
+            <li data-filter=".filter-natural">Agro &amp; Natural Products</li>
+            <li data-filter=".filter-industrial">Industrial &amp; General Cargo</li>
+          </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/wood.webp" class="img-fluid" alt="Wood cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-natural">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/wood.webp" class="img-fluid" alt="Stacked timber logs ready for shipment from Surabaya" loading="lazy">
               <div class="portfolio-info">
                 <h4>Wood</h4>
                 <p>Timber, logs, and wood product shipments.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kayu%20%28Wood%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Wood</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/general.webp" class="img-fluid" alt="General Cargo cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/general.webp" class="img-fluid" alt="Palletized general cargo inside a warehouse beside loaded trucks" loading="lazy">
               <div class="portfolio-info">
                 <h4>General Cargo</h4>
                 <p>General cargo and palletized goods.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kargo%20umum%20%28General%20Cargo%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about General Cargo</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/oversize.webp" class="img-fluid" alt="Oversize Cargo cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/oversize.webp" class="img-fluid" alt="Oversize heavy cargo being lifted onto a trailer by a handling crew" loading="lazy">
               <div class="portfolio-info">
                 <h4>Oversize Cargo</h4>
                 <p>Oversize and heavy cargo handling.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kargo%20oversize%20%28Oversize%20Cargo%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Oversize Cargo</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/container.webp" class="img-fluid" alt="Container cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/container.webp" class="img-fluid" alt="Stacked shipping containers used for FCL and LCL shipments" loading="lazy">
               <div class="portfolio-info">
                 <h4>Container</h4>
                 <p>FCL and LCL container shipments.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20pengiriman%20kontainer%20%28FCL/LCL%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Containers</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/bricket.webp" class="img-fluid" alt="Charcoal cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-natural">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/charchoal.webp" class="img-fluid" alt="Lump charcoal cargo for shipment" loading="lazy">
               <div class="portfolio-info">
                 <h4>Charcoal</h4>
-                <p>Charcoal and briquette shipments.</p>
+                <p>Natural charcoal shipments for export and domestic delivery.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20arang%20%28Charcoal%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Charcoal</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/paper.webp" class="img-fluid" alt="Paper cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/paper.webp" class="img-fluid" alt="Stacks of paper prepared for shipment from Surabaya" loading="lazy">
               <div class="portfolio-info">
                 <h4>Paper</h4>
                 <p>Paper and paper product shipments.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kertas%20%28Paper%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Paper</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/fish.webp" class="img-fluid" alt="Frozen Fish cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-frozen">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/fish.webp" class="img-fluid" alt="Frozen fish prepared for reefer container shipment" loading="lazy">
               <div class="portfolio-info">
                 <h4>Frozen Fish</h4>
-                <p>Frozen fish shipments with careful handling.</p>
+                <p>Frozen fish shipments in reefer containers, handled with care.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20ikan%20beku%20%28Frozen%20Fish%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Frozen Fish</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/shrimp.webp" class="img-fluid" alt="Frozen Shrimp cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-frozen">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/shrimp.webp" class="img-fluid" alt="Frozen shrimp on ice for seafood shipment" loading="lazy">
               <div class="portfolio-info">
                 <h4>Frozen Shrimp</h4>
-                <p>Frozen shrimp and seafood shipments.</p>
+                <p>Frozen shrimp and seafood shipments in reefer containers.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20udang%20beku%20%28Frozen%20Shrimp%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Frozen Shrimp</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/charchoal.webp" class="img-fluid" alt="Briquette cargo shipment in Surabaya" loading="lazy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-natural">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/bricket.webp" class="img-fluid" alt="Charcoal briquettes for shipment" loading="lazy">
               <div class="portfolio-info">
                 <h4>Briquette</h4>
-                <p>Briquette cargo shipments.</p>
+                <p>Charcoal briquette shipments, loaded and secured with care.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20briket%20%28Briquette%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Briquette</a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/ceramic.webp" class="img-fluid" alt="Ceramic products prepared for shipment" loading="lazy">
+              <div class="portfolio-info">
+                <h4>Ceramic</h4>
+                <p>Ceramic product shipments, handled with care to prevent breakage.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20keramik%20%28Ceramic%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Ceramic</a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-natural">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/palm.webp" class="img-fluid" alt="Palm oil cargo prepared for shipment" loading="lazy">
+              <div class="portfolio-info">
+                <h4>Palm Oil</h4>
+                <p>Palm oil shipments arranged and handled with care.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20minyak%20kelapa%20sawit%20%28Palm%20Oil%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Palm Oil</a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-natural">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/spices.webp" class="img-fluid" alt="Cloves, nutmeg, and other spices ready for shipment" loading="lazy">
+              <div class="portfolio-info">
+                <h4>Spices</h4>
+                <p>Cloves, mace, nutmeg, and betel nut shipments.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20rempah-rempah%20%28cengkih%2C%20fuli%2C%20pala%2C%20pinang%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Spices</a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-industrial">
+              <div class="cargo-card">
+              <img src="assets/img/masonry-portfolio/medical.webp" class="img-fluid" alt="Medical equipment packed for shipment" loading="lazy">
+              <div class="portfolio-info">
+                <h4>Medical Equipment</h4>
+                <p>Medical equipment shipments, handled carefully and on schedule.</p>
+                <a class="cargo-ask" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20alat%20kesehatan%20%28Medical%20Equipment%29." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Ask about Medical Equipment</a>
+              </div>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -608,103 +704,6 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Our Clients Section -->
-    <section id="our-clients" class="section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our Clients</h2>
-        <p>Businesses We Serve</p>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-
-        <!-- px-5 menyisakan ruang di kiri-kanan supaya panah tidak menimpa kartu -->
-        <div class="position-relative px-5">
-
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 3000,
-                  "disableOnInteraction": false,
-                  "pauseOnMouseEnter": true
-                },
-                "navigation": {
-                  "nextEl": "#clients-next",
-                  "prevEl": "#clients-prev"
-                },
-                "slidesPerView": 1,
-                "spaceBetween": 20,
-                "breakpoints": {
-                  "576": { "slidesPerView": 2, "spaceBetween": 20 },
-                  "992": { "slidesPerView": 3, "spaceBetween": 24 }
-                }
-              }
-            </script>
-
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide py-3 h-auto">
-                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                  <div class="card-body p-4">
-                    <div class="ratio ratio-16x9 mb-3">
-                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 1 logo" class="object-fit-contain" loading="lazy">
-                    </div>
-                    <h3 class="h6 mb-1">PT Nama Client 1</h3>
-                    <p class="small text-muted mb-0">Timber &amp; Wood Products</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide py-3 h-auto">
-                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                  <div class="card-body p-4">
-                    <div class="ratio ratio-16x9 mb-3">
-                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 2 logo" class="object-fit-contain" loading="lazy">
-                    </div>
-                    <h3 class="h6 mb-1">PT Nama Client 2</h3>
-                    <p class="small text-muted mb-0">Frozen Seafood</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide py-3 h-auto">
-                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                  <div class="card-body p-4">
-                    <div class="ratio ratio-16x9 mb-3">
-                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 3 logo" class="object-fit-contain" loading="lazy">
-                    </div>
-                    <h3 class="h6 mb-1">PT Nama Client 3</h3>
-                    <p class="small text-muted mb-0">Paper Products</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide py-3 h-auto">
-                <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                  <div class="card-body p-4">
-                    <div class="ratio ratio-16x9 mb-3">
-                      <img src="assets/img/logo-placeholder.png" alt="PT Nama Client 4 logo" class="object-fit-contain" loading="lazy">
-                    </div>
-                    <h3 class="h6 mb-1">PT Nama Client 4</h3>
-                    <p class="small text-muted mb-0">General Cargo</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Panah: di luar .swiper, di dalam wrapper px-5 -->
-          <div id="clients-prev" class="swiper-button-prev" aria-label="Previous clients"></div>
-          <div id="clients-next" class="swiper-button-next" aria-label="Next clients"></div>
-
-        </div>
-      </div>
-
-    </section><!-- /Our Clients Section -->
 
 
 

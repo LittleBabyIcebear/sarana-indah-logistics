@@ -12,6 +12,3 @@ node_modules
 
 # Template leftovers that should not be public
 starter-page.html
-
-# Saved WhatsApp web page that ended up inside assets/img (safe to delete from the repo too)
-assets/img/(4) WhatsApp*
