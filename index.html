@@ -129,6 +129,92 @@
     .portfolio .cargo-ask:hover { background: #fff; color: #d62828; }
   </style>
 
+  <style id="silog-wa">
+    /* Floating WhatsApp button (sits above the scroll-to-top button) */
+    .wa-float {
+      position: fixed; right: 6px; bottom: 70px; z-index: 9998;
+      display: flex; align-items: center; justify-content: center;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; color: #fff; text-decoration: none;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+      opacity: 0; transform: translateY(14px) scale(.9);
+      animation: waIn .6s ease 1.6s forwards;
+      transition: background .25s, box-shadow .25s;
+    }
+    .wa-float i { font-size: 32px; line-height: 1; color: #fff; }
+    .wa-float:hover { background: #1ebe5a; color: #fff; box-shadow: 0 12px 28px rgba(0, 0, 0, .34); }
+    .wa-float::before {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: rgba(37, 211, 102, .55); z-index: -1;
+      animation: waPulse 2.4s ease-out 2.4s infinite;
+    }
+    .wa-float .wa-label {
+      position: absolute; right: 68px; top: 50%; transform: translateY(-50%) translateX(8px);
+      background: #fff; color: #1f2937; font-size: 13.5px; font-weight: 600; white-space: nowrap;
+      padding: 8px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+    }
+    .wa-float:hover .wa-label, .wa-float:focus-visible .wa-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @keyframes waIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes waPulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
+    @media (max-width: 575px) {
+      .wa-float { width: 54px; height: 54px; right: 5px; bottom: 66px; }
+      .wa-float i { font-size: 30px; }
+      .wa-float .wa-label { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-float { animation: none; opacity: 1; transform: none; }
+      .wa-float::before { animation: none; display: none; }
+    }
+    @media print { .wa-float { display: none; } }
+  </style>
+
+  <style id="silog-cta">
+    /* Closing call-to-action at the end of the homepage */
+    .closing-cta .cta-card {
+      position: relative; overflow: hidden; border-radius: 20px; padding: 48px 52px;
+      display: flex; align-items: center; justify-content: space-between; gap: 36px;
+      background:
+        radial-gradient(circle at 92% 12%, rgba(255, 90, 100, .28) 0, rgba(255, 90, 100, 0) 38%),
+        radial-gradient(circle at 8% 110%, rgba(80, 130, 255, .30) 0, rgba(80, 130, 255, 0) 45%),
+        linear-gradient(135deg, #0a1e55 0%, #14327a 100%);
+      box-shadow: 0 24px 60px rgba(8, 24, 68, .30);
+    }
+    .closing-cta .cta-card::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(170, 196, 255, .22) 1.2px, transparent 1.4px);
+      background-size: 20px 20px;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, #000 100%);
+    }
+    .closing-cta .cta-text, .closing-cta .cta-actions { position: relative; z-index: 1; }
+    .closing-cta .cta-text { max-width: 560px; }
+    .closing-cta .cta-eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #ff8f97; margin-bottom: 10px; }
+    .closing-cta h2 { color: #fff; font-size: 34px; font-weight: 700; margin: 0 0 12px; }
+    .closing-cta .cta-text p { color: rgba(255, 255, 255, .86); font-size: 16px; margin: 0 0 8px; }
+    .closing-cta .cta-text p.cta-id { font-size: 14.5px; font-style: italic; color: rgba(255, 255, 255, .62); margin: 0; }
+
+    .closing-cta .cta-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; min-width: 250px; }
+    .closing-cta .btn-cta-wa, .closing-cta .btn-cta-quote {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 14px 26px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: .25s;
+    }
+    .closing-cta .btn-cta-wa { background: #25d366; color: #fff; box-shadow: 0 10px 24px rgba(37, 211, 102, .35); }
+    .closing-cta .btn-cta-wa:hover { background: #1ebe5a; transform: translateY(-2px); color: #fff; }
+    .closing-cta .btn-cta-quote { border: 1.5px solid rgba(255, 255, 255, .7); color: #fff; }
+    .closing-cta .btn-cta-quote:hover { background: #fff; color: #0a1e55; }
+    .closing-cta .cta-hours { text-align: center; font-size: 13px; color: rgba(255, 255, 255, .65); margin-top: 2px; }
+    .closing-cta .cta-hours i { margin-right: 6px; }
+
+    @media (max-width: 991px) {
+      .closing-cta .cta-card { flex-direction: column; align-items: flex-start; padding: 38px 30px; gap: 26px; }
+      .closing-cta .cta-actions { align-self: stretch; }
+    }
+    @media (max-width: 575px) {
+      .closing-cta .cta-card { padding: 32px 22px; border-radius: 16px; }
+      .closing-cta h2 { font-size: 26px; }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -352,7 +438,11 @@
             </div>
 
             <div class="swiper-slide client-logo">
-              <img src="assets/img/clients/maersk.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
+              <img src="assets/img/clients/maersk.webp" class="img-fluid" alt="MAERSK logo" loading="lazy">
+            </div>
+
+            <div class="swiper-slide client-logo">
+              <img src="assets/img/clients/hapag.png" class="img-fluid" alt="HAPAG logo" loading="lazy">
             </div>
           </div>
         </div> 
@@ -729,6 +819,25 @@
 
 
 
+    <!-- Closing CTA -->
+    <section id="cta" class="closing-cta section pt-0">
+      <div class="container" data-aos="fade-up">
+        <div class="cta-card">
+          <div class="cta-text">
+            <span class="cta-eyebrow">Ready to ship?</span>
+            <h2>Tell Us About Your Cargo</h2>
+            <p>Share your origin, destination, and cargo details, and our team will help you find the right route and solution.</p>
+            <p class="cta-id" lang="id">Siap mengirim? Ceritakan kargo Anda kepada kami.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn-cta-wa" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kargo." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+            <a class="btn-cta-quote" href="contact.html">Request a Quote <i class="bi bi-arrow-right"></i></a>
+            <span class="cta-hours"><i class="bi bi-clock"></i> Office hours 08:30 &ndash; 17:30 (WIB)</span>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Closing CTA -->
+
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -855,6 +964,12 @@
   </footer>
 
 
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20pengiriman." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    <span class="wa-label">Chat with us</span>
+  </a>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

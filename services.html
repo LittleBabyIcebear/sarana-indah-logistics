@@ -297,6 +297,46 @@
     @media (prefers-reduced-motion: reduce) { .svc .svc-art .plane { animation: none; } .svc .svc-media img { transition: none; } }
   </style>
 
+  <style id="silog-wa">
+    /* Floating WhatsApp button (sits above the scroll-to-top button) */
+    .wa-float {
+      position: fixed; right: 6px; bottom: 70px; z-index: 9998;
+      display: flex; align-items: center; justify-content: center;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; color: #fff; text-decoration: none;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+      opacity: 0; transform: translateY(14px) scale(.9);
+      animation: waIn .6s ease 1.6s forwards;
+      transition: background .25s, box-shadow .25s;
+    }
+    .wa-float i { font-size: 32px; line-height: 1; color: #fff; }
+    .wa-float:hover { background: #1ebe5a; color: #fff; box-shadow: 0 12px 28px rgba(0, 0, 0, .34); }
+    .wa-float::before {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: rgba(37, 211, 102, .55); z-index: -1;
+      animation: waPulse 2.4s ease-out 2.4s infinite;
+    }
+    .wa-float .wa-label {
+      position: absolute; right: 68px; top: 50%; transform: translateY(-50%) translateX(8px);
+      background: #fff; color: #1f2937; font-size: 13.5px; font-weight: 600; white-space: nowrap;
+      padding: 8px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+    }
+    .wa-float:hover .wa-label, .wa-float:focus-visible .wa-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @keyframes waIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes waPulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
+    @media (max-width: 575px) {
+      .wa-float { width: 54px; height: 54px; right: 5px; bottom: 66px; }
+      .wa-float i { font-size: 30px; }
+      .wa-float .wa-label { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-float { animation: none; opacity: 1; transform: none; }
+      .wa-float::before { animation: none; display: none; }
+    }
+    @media print { .wa-float { display: none; } }
+  </style>
+
 </head>
 
 <body class="services-page">
@@ -373,7 +413,7 @@
           <div class="svc-media">
             <div class="frame">
               <span class="svc-num"><i class="bi bi-diagram-3"></i>01</span>
-              <img src="assets/img/bl.webp" alt="Container terminal with port cranes handling cargo for freight forwarding in Surabaya" loading="lazy">
+              <img src="assets/img/bl.webp" alt="Bill of lading shipping document prepared for a freight forwarding shipment from Surabaya" loading="lazy">
             </div>
           </div>
           </div>
@@ -403,7 +443,7 @@
           <div class="svc-media">
             <div class="frame">
               <span class="svc-num"><i class="bi bi-water"></i>02</span>
-              <img src="assets/img/PORT 2.webp" alt="Container ship being loaded at a port terminal, sea freight from Surabaya" loading="lazy">
+              <img src="assets/img/PORT 2.webp" alt="Container terminal with stacked containers and port cranes for sea freight from Surabaya" loading="lazy">
             </div>
           </div>
           </div>
@@ -462,7 +502,7 @@
           <div class="svc-media">
             <div class="frame">
               <span class="svc-num"><i class="bi bi-file-earmark-check"></i>04</span>
-              <img src="assets/img/customs.webp" alt="Stack of shipping documents prepared for customs clearance in Surabaya" loading="lazy">
+              <img src="assets/img/customs.webp" alt="Customs officer overseeing air cargo loading beside an aircraft, customs clearance support" loading="lazy">
             </div>
           </div>
           </div>
@@ -520,7 +560,7 @@
           <div class="svc-media">
             <div class="frame">
               <span class="svc-num"><i class="bi bi-box-seam"></i>06</span>
-              <img src="assets/img/isotank.webp" alt="Heavy oversize cargo being lifted onto a trailer by a handling crew" loading="lazy">
+              <img src="assets/img/isotank.webp" alt="Reach stacker lifting a tank container at a container yard, cargo handling in Surabaya" loading="lazy">
             </div>
           </div>
           </div>
@@ -698,6 +738,12 @@
     </div>
 
   </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20pengiriman." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    <span class="wa-label">Chat with us</span>
+  </a>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

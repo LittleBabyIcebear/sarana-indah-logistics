@@ -12,3 +12,4 @@ node_modules
 
 # Template leftovers that should not be public
 starter-page.html
+maintenance.html
