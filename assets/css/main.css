@@ -733,7 +733,7 @@ section,
   padding-bottom: 60px;
   position: relative;
 }
-
+/*
 .section-title h2 {
   font-size: 14px;
   font-weight: 500;
@@ -744,6 +744,19 @@ section,
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   position: relative;
+}*/
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1.6;
+  margin: 0 0 -13.4px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  position: relative;
+  top: -7px;
 }
 
 .section-title h2::after {
