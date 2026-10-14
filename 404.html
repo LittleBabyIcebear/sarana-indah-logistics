@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Page Not Found | Sarana Indah Logistic</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to the PT Sarana Indah Logistic homepage or contact us.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicons -->
+  <link href="/assets/img/logo.png" rel="icon" type="image/png">
+  <link href="/assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style id="silog-brand">
+    /* Header brand lockup: SILOG + section-title style tagline */
+    .header .logo .brand-lockup { display: flex; flex-direction: column; justify-content: center; line-height: 1; }
+    .header .logo .brand-name {
+      font-family: var(--heading-font); font-size: 30px; font-weight: 800; letter-spacing: .5px;
+      color: var(--heading-color); text-transform: uppercase; line-height: 1;
+    }
+    .header .logo .brand-full {
+      display: flex; align-items: center; margin-top: 5px;
+      font-family: var(--heading-font); font-size: 10.5px; font-weight: 500; letter-spacing: 1.6px;
+      text-transform: uppercase; color: #6b7280; white-space: nowrap; line-height: 1;
+    }
+    @media (max-width: 575px) {
+      .header .logo .brand-name { font-size: 24px; }
+      .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
+      .header .logo .brand-full::after { display: none; }
+    }
+  </style>
+  <style id="silog-wa">
+    /* Floating WhatsApp button (sits above the scroll-to-top button) */
+    .wa-float {
+      position: fixed; right: 6px; bottom: 70px; z-index: 9998;
+      display: flex; align-items: center; justify-content: center;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; color: #fff; text-decoration: none;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+      opacity: 0; transform: translateY(14px) scale(.9);
+      animation: waIn .6s ease 1.6s forwards;
+      transition: background .25s, box-shadow .25s;
+    }
+    .wa-float i { font-size: 32px; line-height: 1; color: #fff; }
+    .wa-float:hover { background: #1ebe5a; color: #fff; box-shadow: 0 12px 28px rgba(0, 0, 0, .34); }
+    .wa-float::before {
+      content: ""; position: absolute; inset: 0; border-radius: 50%;
+      background: rgba(37, 211, 102, .55); z-index: -1;
+      animation: waPulse 2.4s ease-out 2.4s infinite;
+    }
+    .wa-float .wa-label {
+      position: absolute; right: 68px; top: 50%; transform: translateY(-50%) translateX(8px);
+      background: #fff; color: #1f2937; font-size: 13.5px; font-weight: 600; white-space: nowrap;
+      padding: 8px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+    }
+    .wa-float:hover .wa-label, .wa-float:focus-visible .wa-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @keyframes waIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes waPulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
+    @media (max-width: 575px) {
+      .wa-float { width: 54px; height: 54px; right: 5px; bottom: 66px; }
+      .wa-float i { font-size: 30px; }
+      .wa-float .wa-label { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-float { animation: none; opacity: 1; transform: none; }
+      .wa-float::before { animation: none; display: none; }
+    }
+    @media print { .wa-float { display: none; } }
+  </style>
+  <style id="silog-404">
+    /* 404 page */
+    .nf { position: relative; overflow: hidden; min-height: 72vh; display: flex; align-items: center; padding: 70px 0; }
+    .nf::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(8, 24, 68, .10) 1.2px, transparent 1.4px); background-size: 22px 22px;
+      -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse at 50% 45%, #000 0%, transparent 70%);
+    }
+    .nf .container { position: relative; z-index: 1; text-align: center; }
+    .nf .code { font-family: var(--heading-font); font-size: clamp(96px, 20vw, 190px); font-weight: 800; line-height: 1; letter-spacing: -2px; color: var(--heading-color); margin: 0; max-width: none; }
+    .nf .code span { color: #d62828; }
+    .nf h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; margin: 6px 0 12px; }
+    .nf p { max-width: 560px; margin: 0 auto 8px; font-size: 16px; }
+    .nf p.id { font-size: 14.5px; font-style: italic; opacity: .7; margin-bottom: 30px; }
+    .nf .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .nf .btn-home, .nf .btn-services, .nf .btn-wa {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; transition: .25s;
+    }
+    .nf .btn-home { background: #d62828; color: #fff; box-shadow: 0 10px 24px rgba(214, 40, 40, .28); }
+    .nf .btn-home:hover { background: #b81f1f; color: #fff; transform: translateY(-2px); }
+    .nf .btn-services { border: 1.5px solid rgba(8, 24, 68, .3); color: var(--heading-color); }
+    .nf .btn-services:hover { background: var(--heading-color); border-color: var(--heading-color); color: #fff; }
+    .nf .btn-wa { background: #25d366; color: #fff; box-shadow: 0 10px 24px rgba(37, 211, 102, .3); }
+    .nf .btn-wa:hover { background: #1ebe5a; color: #fff; transform: translateY(-2px); }
+  </style>
+
+</head>
+
+<body class="not-found-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <img src="/assets/img/logo.png" alt="PT Sarana Indah Logistic (SiLog) logo">
+        <span class="brand-lockup">
+          <span class="brand-name">SiLog</span>
+          <span class="brand-full">Sarana Indah Logistic</span>
+        </span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li class="dropdown">
+          <a href="/services">
+            <span>Services</span>
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="/services#sea-freight">Sea Freight</a></li>
+            <li><a href="/services#air-freight">Air Freight</a></li>
+            <li><a href="/services#customs-clearance">Customs Clearance</a></li>
+            <li><a href="/services#trucking">Trucking</a></li>
+            <li><a href="/services#cargo-handling">Cargo Handling</a></li>
+            <li><a href="/services#freight-forwarding">Freight Forwarding</a></li>
+          </ul>
+          </li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted btn-whatsapp" href="https://wa.me/6282229505258" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp"></i> Contact Us
+      </a>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="nf">
+      <div class="container" data-aos="fade-up">
+        <p class="code" aria-hidden="true">4<span>0</span>4</p>
+        <h1>Page Not Found</h1>
+        <p>Sorry, we could not find the page you were looking for. It may have been moved, or the address may be typed incorrectly.</p>
+        <p class="id" lang="id">Halaman yang Anda cari tidak ditemukan. Silakan kembali ke beranda atau hubungi kami.</p>
+        <div class="actions">
+          <a class="btn-home" href="/"><i class="bi bi-house"></i> Back to Home</a>
+          <a class="btn-services" href="/services">Our Services</a>
+          <a class="btn-wa" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <!-- Company Information -->
+        <div class="col-lg-5 col-md-6 footer-about">
+
+          <a href="/" class="logo d-flex align-items-center">
+            <span class="sitename">PT Sarana Indah Logistic</span>
+          </a>
+
+          <div class="footer-contact pt-3">
+            <p><strong>Address</strong></p>
+            <p>Jl. Embong Malang, Pakuwon Centre No.1 23rd Floor, Tegalsari, Surabaya, East Java 60261 </p>
+
+            <p class="mt-3">
+              <strong>Phone:</strong>
+              <span><a href="https://wa.me/6282229505258" rel="noopener">+62 822-2950-5258</a></span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <span><a href="mailto:admin@saranaindahlogistic.com">admin@saranaindahlogistic.com</a><br><a href="mailto:subdoc@saranaindahlogistic.com">subdoc@saranaindahlogistic.com</a></span>
+            </p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="social-links d-flex mt-4">
+            <a href="#">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+        </div>
+
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+
+          <h4>Useful Links</h4>
+
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+
+            <li>
+              <a href="/services">Services</a>
+            </li>
+
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+
+        </div>
+
+
+        <!-- Google Maps -->
+        <div class="col-lg-5 col-md-12">
+
+          <h4>Our Location</h4>
+
+          <div class="mt-3">
+            <iframe
+              title="PT Sarana Indah Logistic location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.7477547059398!2d112.73592007357118!3d-7.261010071334773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95df3ab3def%3A0xd66249eae1f423f3!2sPakuwon%20Center%20Office%20Tower%2C%20Jl.%20Embong%20Malang%20No.1%2C%20RW.5%2C%20Kedungdoro%2C%20Kecamatan%20Kedungsari%2C%20Surabaya%2C%20Jawa%20Timur%2060261!5e1!3m2!1sen!2sid!4v1791448344086!5m2!1sen!2sid"
+              width="100%"
+              height="220"
+              style="border:0; width:100%;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="container copyright text-center mt-4">
+
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">PT Sarana Indah Logistic</strong>
+        <span>All Rights Reserved</span>
+      </p>
+
+      <div class="credits">
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20pengiriman." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    <span class="wa-label">Chat with us</span>
+  </a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
