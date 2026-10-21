@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://saranaindahlogistic.com/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/"/>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://saranaindahlogistic.com/services</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://saranaindahlogistic.com/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/"/>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saranaindahlogistic.com/about</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://saranaindahlogistic.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/layanan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/services"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saranaindahlogistic.com/id/layanan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/layanan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/services"/>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saranaindahlogistic.com/contact</loc>
-    <lastmod>2026-10-14</lastmod>
+    <loc>https://saranaindahlogistic.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/about"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/tentang-kami"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/about"/>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saranaindahlogistic.com/id/tentang-kami</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/about"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/tentang-kami"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/about"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://saranaindahlogistic.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/kontak"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/contact"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saranaindahlogistic.com/id/kontak</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/kontak"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/contact"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

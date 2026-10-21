@@ -7,6 +7,9 @@
   <title>Freight Forwarding Surabaya | Sarana Indah Logistic (SiLog)</title>
   <meta name="description" content="PT Sarana Indah Logistic offers freight forwarding and export import services in Surabaya: sea freight, air freight, trucking, and customs clearance.">
   <link rel="canonical" href="https://saranaindahlogistic.com/">
+  <link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/">
+  <link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/">
+  <link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -95,6 +98,16 @@
       .header .logo .brand-name { font-size: 24px; }
       .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
       .header .logo .brand-full::after { display: none; }
+    }
+  
+    /* Language switcher (EN | ID) */
+    .navmenu .lang-switch { display: flex; align-items: center; gap: 2px; padding-left: 6px; }
+    .navmenu .lang-switch a { padding: 4px 8px; font-size: 13px; font-weight: 600; letter-spacing: .6px; border-radius: 6px; }
+    .navmenu .lang-switch a.current { color: var(--accent-color); pointer-events: none; }
+    .navmenu .lang-switch span { opacity: .35; }
+    @media (max-width: 1199px) {
+      .navmenu .lang-switch { padding: 10px 20px; }
+      .navmenu .lang-switch a { padding: 6px 10px; font-size: 15px; }
     }
   </style>
   <style id="silog-hero">
@@ -227,6 +240,12 @@
       content: ""; display: block; width: 36px; height: 1px; margin: 0 auto 12px;
       background: rgba(8, 24, 68, .16);
     }
+  
+    /* Liner logos: every logo sits in the same box, so sizes look even */
+    .clients .clients-swiper .client-logo img {
+      width: 180px; max-width: 100%; height: 64px; padding: 0;
+      object-fit: contain; opacity: .85; filter: grayscale(100);
+    }
   </style>
 </head>
 
@@ -235,7 +254,7 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="/" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/logo.png" alt="PT Sarana Indah Logistic (SiLog) logo">
         <span class="brand-lockup">
           <span class="brand-name">SiLog</span>
@@ -246,22 +265,23 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="/about">About</a></li>
           <li class="dropdown">
           <a href="#services">
             <span>Services</span>
             <i class="bi bi-chevron-down toggle-dropdown"></i>
           </a>
           <ul>
-            <li><a href="services.html#sea-freight">Sea Freight</a></li>
-            <li><a href="services.html#air-freight">Air Freight</a></li>
-            <li><a href="services.html#customs-clearance">Customs Clearance</a></li>
-            <li><a href="services.html#trucking">Trucking</a></li>
-            <li><a href="services.html#cargo-handling">Cargo Handling</a></li>
-            <li><a href="services.html#freight-forwarding">Freight Forwarding</a></li>
+            <li><a href="/services#sea-freight">Sea Freight</a></li>
+            <li><a href="/services#air-freight">Air Freight</a></li>
+            <li><a href="/services#customs-clearance">Customs Clearance</a></li>
+            <li><a href="/services#trucking">Trucking</a></li>
+            <li><a href="/services#cargo-handling">Cargo Handling</a></li>
+            <li><a href="/services#freight-forwarding">Freight Forwarding</a></li>
           </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li class="lang-switch"><a href="/" hreflang="en" lang="en" title="English" class="current" aria-current="true">EN</a><span aria-hidden="true">/</span><a href="/id/index.html" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -353,7 +373,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <p>Operating from Surabaya, one of Indonesia's main trade gateways, we coordinate shippers, carriers, ports, and destinations so your cargo arrives safely and on schedule. Contact us for freight forwarding and export import services tailored to your cargo.</p>
-            <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="/about" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
         </div>
@@ -393,108 +413,51 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/evergreen.webp" class="img-fluid" alt="Evergreen logo" loading="lazy">
             </div>
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/oocl.webp" class="img-fluid" alt="OOCL logo" loading="lazy">
             </div>
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/cosco.webp" class="img-fluid" alt="COSCO logo" loading="lazy">
             </div>
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/one.png" class="img-fluid" alt="ONE logo" loading="lazy">
             </div>
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/goldstart.webp" class="img-fluid" alt="Gold Star Line logo" loading="lazy">
             </div>
-          
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/kmtc.webp" class="img-fluid" alt="KMTC logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
               <img src="assets/img/logo/cma.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/maersk.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
+              <img src="assets/img/logo/maersk.webp" class="img-fluid" alt="Maersk logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/hapag.png" class="img-fluid" alt="HAPAG logo" loading="lazy">
+              <img src="assets/img/logo/hapag.png" class="img-fluid" alt="Hapag-Lloyd logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/msc.webp" class="img-fluid" alt="HAPAG logo" loading="lazy">
+              <img src="assets/img/logo/msc.webp" class="img-fluid" alt="MSC logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/SITC.webp" class="img-fluid" alt="HAPAG logo" loading="lazy">
+              <img src="assets/img/logo/SITC.webp" class="img-fluid" alt="SITC logo" loading="lazy">
             </div>
-
             <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/yangming.png" class="img-fluid" alt="YANG MING logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/evergreen.webp" class="img-fluid" alt="Evergreen logo" loading="lazy">
-            </div>
-          
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/oocl.webp" class="img-fluid" alt="OOCL logo" loading="lazy">
-            </div>
-          
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/cosco.webp" class="img-fluid" alt="COSCO logo" loading="lazy">
-            </div>
-          
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/one.png" class="img-fluid" alt="ONE logo" loading="lazy">
-            </div>
-          
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/goldstart.webp" class="img-fluid" alt="Gold Star Line logo" loading="lazy">
-            </div>
-          
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/kmtc.webp" class="img-fluid" alt="KMTC logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/cma.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/maersk.webp" class="img-fluid" alt="CMA CGM logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/hapag.png" class="img-fluid" alt="HAPAG logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/msc.webp" class="img-fluid" alt="HAPAG logo" loading="lazy">
-            </div>
-
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/SITC.webp" class="img-fluid" alt="HAPAG logo" loading="lazy">
-            </div>
-            
-            <div class="swiper-slide client-logo">
-              <img src="assets/img/logo/yangming.png" class="img-fluid" alt="YANG MING logo" loading="lazy">
+              <img src="assets/img/logo/yangming.png" class="img-fluid" alt="Yang Ming logo" loading="lazy">
             </div>
           </div>
         </div> 
 
         <p class="liners-note" data-aos="fade-up" data-aos-delay="200">All logos and trademarks belong to their respective owners. 
+
           <br> PT Sarana Indah Logistic is an independent freight forwarder and is not affiliated with or endorsed by these companies.
+
         </p>
+
       </div>
         
     </section><!-- /Clients Section -->
@@ -520,7 +483,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#sea-freight" class="stretched-link">
+                  <a href="/services#sea-freight" class="stretched-link">
                     Sea Freight
                   </a>
                 </h4>
@@ -545,7 +508,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#air-freight" class="stretched-link">
+                  <a href="/services#air-freight" class="stretched-link">
                     Air Freight
                   </a>
                 </h4>
@@ -570,7 +533,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#trucking" class="stretched-link">
+                  <a href="/services#trucking" class="stretched-link">
                     Trucking
                   </a>
                 </h4>
@@ -595,7 +558,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#customs-clearance" class="stretched-link">
+                  <a href="/services#customs-clearance" class="stretched-link">
                     Customs Clearance
                   </a>
                 </h4>
@@ -619,7 +582,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#cargo-handling" class="stretched-link">
+                  <a href="/services#cargo-handling" class="stretched-link">
                     Cargo Handling
                   </a>
                 </h4>
@@ -643,7 +606,7 @@
             
               <div>
                 <h4 class="title">
-                  <a href="services.html#freight-forwarding" class="stretched-link">
+                  <a href="/services#freight-forwarding" class="stretched-link">
                     Freight Forwarding
                   </a>
                 </h4>
@@ -879,7 +842,7 @@
           </div>
           <div class="cta-actions">
             <a class="btn-cta-wa" href="https://wa.me/6282229505258?text=Halo%20PT%20Sarana%20Indah%20Logistic%2C%20saya%20ingin%20menanyakan%20pengiriman%20kargo." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
-            <a class="btn-cta-quote" href="contact.html">Request a Quote <i class="bi bi-arrow-right"></i></a>
+            <a class="btn-cta-quote" href="/contact">Request a Quote <i class="bi bi-arrow-right"></i></a>
             <span class="cta-hours"><i class="bi bi-clock"></i> Office hours 08:30 &ndash; 17:30 (WIB)</span>
           </div>
         </div>
@@ -896,7 +859,7 @@
         <!-- Company Information -->
         <div class="col-lg-5 col-md-6 footer-about">
 
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="/" class="logo d-flex align-items-center">
             <span class="sitename">PT Sarana Indah Logistic</span>
           </a>
 
@@ -948,15 +911,15 @@
             </li>
 
             <li>
-              <a href="about.html">About Us</a>
+              <a href="/about">About Us</a>
             </li>
 
             <li>
-              <a href="services.html">Services</a>
+              <a href="/services">Services</a>
             </li>
 
             <li>
-              <a href="contact.html">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
 
             <li>
