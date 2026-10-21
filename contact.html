@@ -7,6 +7,9 @@
   <title>Contact Sarana Indah Logistic | Freight Forwarder Surabaya</title>
   <meta name="description" content="Request a freight quote from PT Sarana Indah Logistic in Surabaya. Message us on WhatsApp or visit our office at Pakuwon Centre. Open 08:30-17:30.">
   <link rel="canonical" href="https://saranaindahlogistic.com/contact">
+  <link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/contact">
+  <link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/kontak">
+  <link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/contact">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -148,6 +151,16 @@
       .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
       .header .logo .brand-full::after { display: none; }
     }
+  
+    /* Language switcher (EN | ID) */
+    .navmenu .lang-switch { display: flex; align-items: center; gap: 2px; padding-left: 6px; }
+    .navmenu .lang-switch a { padding: 4px 8px; font-size: 13px; font-weight: 600; letter-spacing: .6px; border-radius: 6px; }
+    .navmenu .lang-switch a.current { color: var(--accent-color); pointer-events: none; }
+    .navmenu .lang-switch span { opacity: .35; }
+    @media (max-width: 1199px) {
+      .navmenu .lang-switch { padding: 10px 20px; }
+      .navmenu .lang-switch a { padding: 6px 10px; font-size: 15px; }
+    }
   </style>
 
   <style>
@@ -262,6 +275,7 @@
           </ul>
           </li>
           <li><a href="/contact" class="active">Contact</a></li>
+          <li class="lang-switch"><a href="/contact" hreflang="en" lang="en" title="English" class="current" aria-current="true">EN</a><span aria-hidden="true">/</span><a href="/id/kontak" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

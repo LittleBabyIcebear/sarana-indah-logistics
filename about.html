@@ -7,6 +7,9 @@
   <title>About Sarana Indah Logistic | Freight Forwarder Surabaya</title>
   <meta name="description" content="PT Sarana Indah Logistic is a Surabaya-based freight forwarder handling sea freight, air freight, trucking and customs clearance for export-import cargo.">
   <link rel="canonical" href="https://saranaindahlogistic.com/about">
+  <link rel="alternate" hreflang="en" href="https://saranaindahlogistic.com/about">
+  <link rel="alternate" hreflang="id" href="https://saranaindahlogistic.com/id/tentang-kami">
+  <link rel="alternate" hreflang="x-default" href="https://saranaindahlogistic.com/about">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -102,6 +105,16 @@
       .header .logo .brand-name { font-size: 24px; }
       .header .logo .brand-full { font-size: 7.5px; letter-spacing: 1px; margin-top: 4px; }
       .header .logo .brand-full::after { display: none; }
+    }
+  
+    /* Language switcher (EN | ID) */
+    .navmenu .lang-switch { display: flex; align-items: center; gap: 2px; padding-left: 6px; }
+    .navmenu .lang-switch a { padding: 4px 8px; font-size: 13px; font-weight: 600; letter-spacing: .6px; border-radius: 6px; }
+    .navmenu .lang-switch a.current { color: var(--accent-color); pointer-events: none; }
+    .navmenu .lang-switch span { opacity: .35; }
+    @media (max-width: 1199px) {
+      .navmenu .lang-switch { padding: 10px 20px; }
+      .navmenu .lang-switch a { padding: 6px 10px; font-size: 15px; }
     }
   </style>
 
@@ -376,6 +389,7 @@
           </ul>
           </li>
           <li><a href="/contact">Contact</a></li>
+          <li class="lang-switch"><a href="/about" hreflang="en" lang="en" title="English" class="current" aria-current="true">EN</a><span aria-hidden="true">/</span><a href="/id/tentang-kami" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -451,7 +465,7 @@
                   <i class="bi bi-check2"></i>
                   <h4>Connected to leading shipping lines</h4>
                 </div>
-                <p>We work with global liners including Evergreen, OOCL, COSCO, ONE, Gold Star Line, KMTC, and CMA CGM, giving your cargo access to reliable sea routes.</p>
+                <p>We work with global liners including Evergreen, OOCL, COSCO, ONE, Gold Star Line, KMTC, CMA CGM, Maersk, Hapag-Lloyd, MSC, SITC, and Yang Ming, giving your cargo access to reliable sea routes.</p>
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade" id="about-2-tab2">
